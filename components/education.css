@@ -1,0 +1,87 @@
+/* ========== Education Section ========== */
+.education {
+  background-color: var(--bg-secondary);
+}
+
+.education-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-item {
+  background-color: var(--bg-primary);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+.education-item:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+}
+
+.education-item:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.education-degree {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.education-year {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.education-school {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.education-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.education-cta {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-item {
+    padding: 1.5rem;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .education-degree {
+    font-size: 1.125rem;
+  }
+}
