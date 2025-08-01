@@ -40,3 +40,9 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
