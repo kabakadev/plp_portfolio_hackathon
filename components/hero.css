@@ -1,4 +1,13 @@
 /* ========== Hero Section ========== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -72,6 +81,19 @@
 }
 
 /* Animations */
+@media (prefers-reduced-motion: reduce) {
+  .hero-content,
+  .hero-image {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .profile-img:hover {
+    transform: none !important;
+    box-shadow: var(--shadow-lg); /* fallback shadow */
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
