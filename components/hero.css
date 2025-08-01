@@ -22,3 +22,10 @@
 .hero-content {
   animation: fadeInUp 1s ease-out;
 }
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
