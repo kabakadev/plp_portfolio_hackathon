@@ -19,3 +19,6 @@
   gap: 4rem;
   align-items: center;
 }
+.hero-content {
+  animation: fadeInUp 1s ease-out;
+}
