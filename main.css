@@ -12,3 +12,9 @@
   --border-color: #e5e7eb;
   --transition: all 0.3s ease;
 }
+/* Base Typography */
+body {
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
