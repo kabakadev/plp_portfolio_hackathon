@@ -9,4 +9,6 @@
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
   --bg-dark: #0f172a;
+  --border-color: #e5e7eb;
+  --transition: all 0.3s ease;
 }
