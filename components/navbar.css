@@ -165,7 +165,7 @@
     display: flex;
   }
 
-  /* Adjust header for mobile - move logo down and make smaller */
+  /* Adjust header for mobile -  Make logo scrollable on mobile */
   .header {
     position: static; /* <- Let it scroll with the page */
     top: auto;

@@ -65,13 +65,13 @@
     align-items: center;
   }
 
-  /* Adjust footer for mobile nav */
+  /* Adjust footer space for mobile navigation overlays */
   footer {
     margin-bottom: 80px;
   }
 }
 
-/* Phones */
+/* Phones - layout tweaks below 480px */
 @media (max-width: 480px) {
   section {
     padding: 3rem 0;
@@ -89,6 +89,7 @@
     font-size: 1rem;
   }
   .hero-cta {
+    /* Stack CTA buttons and center them */
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -111,6 +112,7 @@
     font-size: 0.9rem;
   }
   .education-header {
+    /* Stack layout vertically and align to start */
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
@@ -124,7 +126,7 @@
 /* Smooth scrolling adjustments for mobile nav */
 @media (max-width: 768px) {
   html {
-    scroll-padding-top: 80px;
+    scroll-padding-top: 80px; /* Prevents anchor links from being hidden behind fixed headers */
     scroll-padding-bottom: 80px;
   }
 }
