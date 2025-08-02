@@ -8,6 +8,15 @@ This is my professional portfolio website showcasing my skills, projects, and ex
 
 ---
 
+## 🌐 Live Site
+
+You can view the live portfolio here:  
+🔗 [kabakadev.github.io/plp_portfolio_hackathon](https://kabakadev.github.io/plp_portfolio_hackathon/)
+
+---
+
+---
+
 ## ✨ Features
 
 - **Responsive Design**: Fully responsive layout for mobile, tablet, and desktop
