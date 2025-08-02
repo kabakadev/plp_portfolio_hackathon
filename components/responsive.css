@@ -1,36 +1,38 @@
 /* ========== Responsive Design ========== */
 
-/* Remove all hamburger menu styles and replace with mobile nav adjustments */
-
-/* Hero Section Responsive */
+/* Hero Section Responsive - triggers when screen is 968px or smaller */
 @media (max-width: 968px) {
   .hero-container {
+    /* Collapse to single column layout */
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
   }
   .hero-subtitle {
+    /* Expand width and center subtitle */
     max-width: 100%;
     margin: 0 auto 2rem;
   }
   .hero-cta {
+    /* Center CTA elements horizontally */
     justify-content: center;
   }
   .profile-img-container {
+    /* Center profile image block */
     margin: 0 auto;
   }
 }
 
-/* Tablets and Small Laptops */
+/* Tablets and Small Laptops - layout adapts below 768px */
 @media (max-width: 768px) {
   section {
-    padding: 4rem 0;
+    padding: 4rem 0; /* Add vertical spacing */
   }
   #home {
-    padding-top: 6rem;
+    padding-top: 6rem; /* Give extra top space */
   }
   .section-title {
-    font-size: 2rem;
+    font-size: 2rem; /* Scale down heading size */
   }
   .hero-title {
     font-size: 2.5rem;
@@ -40,17 +42,17 @@
   }
   .profile-img-container {
     width: 250px;
-    height: 250px;
+    height: 250px; /* Constrain image size */
   }
   .about-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Collapse to single column */
     gap: 1.5rem;
   }
   .skills-grid {
     grid-template-columns: 1fr;
   }
   .footer-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack footer sections */
     gap: 2rem;
     text-align: center;
   }
