@@ -2,21 +2,20 @@
 
 /* CSS Variables */
 :root {
-  --primary-color: #1e3a8a;
-  --secondary-color: #0ea5e9;
-  --accent-color: #f59e0b;
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
-  --text-light: #9ca3af;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-dark: #0f172a;
-  --border-color: #e5e7eb;
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --primary-color: #6c63ff;
+  --secondary-color: #4fc3f7;
+  --accent-color: #ffd54f;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-dark: #0a0a0a;
+  --border-color: #333333;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
   --border-radius: 0.5rem;
-  --transition: all 0.3s ease;
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -36,12 +35,12 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
-/* Section Styles */
 section {
-  padding: 4rem 0;
+  padding: 6rem 0;
+  position: relative;
 }
 
 .section-title {
@@ -49,8 +48,10 @@ section {
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--text-primary);
   position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .section-title::after {
@@ -69,40 +70,64 @@ section {
   border-radius: 2px;
 }
 
+.section-title::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background: rgba(108, 99, 255, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
 /* Button Styles */
+
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   border-radius: var(--border-radius);
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   transition: var(--transition);
   cursor: pointer;
   border: 2px solid transparent;
   text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   color: white;
+  box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-  background-color: #1e40af;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
+  background: linear-gradient(
+    45deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--text-primary);
   border-color: var(--primary-color);
 }
 
 .btn-secondary:hover {
   background-color: var(--primary-color);
   color: white;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-outline {
@@ -113,42 +138,50 @@ section {
 
 .btn-outline:hover {
   background-color: var(--secondary-color);
-  color: white;
-  transform: translateY(-2px);
+  color: var(--bg-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
-
-.btn-full {
-  width: 100%;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
+/* ========== Animations ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-
-  section {
-    padding: 3rem 0;
-  }
-
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .btn {
-    padding: 0.625rem 1.25rem;
-    font-size: 0.9rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1.75rem;
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
   }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-  .btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
   }
+  50% {
+    transform: translate(10px, -10px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+/* Icons */
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }

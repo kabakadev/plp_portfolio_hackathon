@@ -24,10 +24,10 @@
     <link rel="stylesheet" href="components/education.css" />
     <link rel="stylesheet" href="components/projects.css" />
     <link rel="stylesheet" href="components/footer.css" />
+    <link rel="stylesheet" href="components/responsive.css" />
   </head>
   <body>
     <header class="header">
-      <!-- navigation items -->
       <nav class="navbar">
         <div class="nav-container">
           <div class="nav-logo">
@@ -43,16 +43,16 @@
         </div>
       </nav>
     </header>
+
     <main>
-      <!-- HERO SECTION -->
+      <!-- ========== Hero Section ========== -->
       <section id="home">
+        <div class="hero-background">
+          <div class="hero-pattern"></div>
+          <div class="hero-shape shape-1"></div>
+          <div class="hero-shape shape-2"></div>
+        </div>
         <div class="hero-container">
-          <div class="hero-background">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
-          </div>
           <div class="hero-content">
             <h1 class="hero-title">
               Hi, I'm <span class="hero-name">Ian Kabaka</span>
@@ -61,7 +61,13 @@
               Full-Stack Web Developer passionate about creating elegant and
               functional web experiences
             </p>
-            <div class="hero-image">
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a href="#footer" class="btn btn-secondary">Get In Touch</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="profile-img-container">
               <img
                 src="assets/images/profile-photo.png"
                 alt="Ian Kabaka - Web Developer"
@@ -71,13 +77,9 @@
           </div>
         </div>
       </section>
+
       <!-- ========== About Me Section ========== -->
       <section id="about" class="about">
-        <div class="about-background">
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
-          <div class="shape shape-3"></div>
-        </div>
         <div class="container">
           <h2 class="section-title">About Me</h2>
           <div class="about-content">
@@ -96,15 +98,45 @@
               activities. I believe in continuous learning and staying
               up-to-date with the latest industry trends and best practices.
             </p>
+
+            <div class="about-grid">
+              <div class="about-card">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.25c-5.376 0-9.75 4.374-9.75 9.75s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75-4.374-9.75-9.75-9.75zm0 16.5c-3.722 0-6.75-3.028-6.75-6.75s3.028-6.75 6.75-6.75 6.75 3.028 6.75 6.75-3.028 6.75-6.75 6.75zm-3-11.25h6v1.5h-6v-1.5zm0 3h6v1.5h-6v-1.5zm0 3h6v1.5h-6v-1.5z"
+                  />
+                </svg>
+                <h3>Problem Solver</h3>
+                <p>Finding elegant solutions to complex challenges</p>
+              </div>
+              <div class="about-card">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path
+                    d="M21 6.75h-18v-1.5h18v1.5zm0 4.5h-18v-1.5h18v1.5zm0 4.5h-18v-1.5h18v1.5zm0 4.5h-18v-1.5h18v1.5z"
+                  />
+                </svg>
+                <h3>Clean Code</h3>
+                <p>Writing maintainable, efficient and scalable code</p>
+              </div>
+              <div class="about-card">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 3c-4.971 0-9 4.029-9 9s4.029 9 9 9 9-4.029 9-9-4.029-9-9-9zm0 16.5c-4.136 0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5-3.364 7.5-7.5 7.5zm3.75-10.5h-7.5v1.5h7.5v-1.5zm0 3h-7.5v1.5h7.5v-1.5zm0 3h-7.5v1.5h7.5v-1.5z"
+                  />
+                </svg>
+                <h3>User Focused</h3>
+                <p>Creating intuitive experiences that users love</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       <!-- ========== Skills Section ========== -->
       <section id="skills" class="skills">
         <div class="container">
           <h2 class="section-title">Skills & Technologies</h2>
           <div class="skills-grid">
-            <!-- Skill Category Component -->
             <div class="skill-category">
               <h3 class="skill-category-title">Frontend</h3>
               <div class="skill-items">
@@ -112,6 +144,8 @@
                 <span class="skill-item">CSS3</span>
                 <span class="skill-item">JavaScript</span>
                 <span class="skill-item">React</span>
+                <span class="skill-item">SASS</span>
+                <span class="skill-item">Tailwind CSS</span>
               </div>
             </div>
 
@@ -119,7 +153,10 @@
               <h3 class="skill-category-title">Backend</h3>
               <div class="skill-items">
                 <span class="skill-item">Python</span>
+                <span class="skill-item">Node.js</span>
+                <span class="skill-item">Express</span>
                 <span class="skill-item">PostgreSQL</span>
+                <span class="skill-item">MongoDB</span>
               </div>
             </div>
 
@@ -129,6 +166,9 @@
                 <span class="skill-item">Git</span>
                 <span class="skill-item">Docker</span>
                 <span class="skill-item">Figma</span>
+                <span class="skill-item">Webpack</span>
+                <span class="skill-item">AWS</span>
+                <span class="skill-item">CI/CD</span>
               </div>
             </div>
           </div>
@@ -153,27 +193,38 @@
                 technologies including React, Flask and deployment strategies.
               </p>
             </div>
+
+            <div class="education-item">
+              <div class="education-header">
+                <h3 class="education-degree">Computer Science Degree</h3>
+                <span class="education-year">2019-2023</span>
+              </div>
+              <p class="education-school">University of Technology</p>
+              <p class="education-description">
+                Comprehensive computer science program focusing on algorithms,
+                data structures, software engineering principles, and web
+                technologies.
+              </p>
+            </div>
+
             <div class="education-cta">
-              <a
-                href="assets/ian_kabaka_cv.pdf"
-                class="btn btn-outline"
-                download
-              >
+              <a href="#" class="btn btn-outline" download>
                 Download Full CV
               </a>
             </div>
           </div>
         </div>
       </section>
+
       <!-- ========== Projects Section ========== -->
       <section id="projects" class="projects">
         <div class="container">
-          <h2 class="section-title">Featured Project</h2>
+          <h2 class="section-title">Featured Projects</h2>
           <div class="projects-grid">
             <article class="project-card">
               <div class="project-image">
                 <img
-                  src="assets/images/flashlearn.png"
+                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                   alt="Flashcard learning platform"
                 />
               </div>
@@ -189,7 +240,8 @@
                   <span class="tech-tag">React</span>
                   <span class="tech-tag">Python</span>
                   <span class="tech-tag">PostgreSQL</span>
-                  <span class="tech-tag">REST API architecture</span>
+                  <span class="tech-tag">REST API</span>
+                  <span class="tech-tag">Tailwind CSS</span>
                 </div>
                 <div class="project-links">
                   <a
@@ -197,6 +249,11 @@
                     class="project-link"
                     target="_blank"
                   >
+                    <svg class="icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      />
+                    </svg>
                     View Code
                   </a>
                   <a
@@ -204,6 +261,11 @@
                     class="project-link"
                     target="_blank"
                   >
+                    <svg class="icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16l6-4-6-4v8z"
+                      />
+                    </svg>
                     Live Demo
                   </a>
                 </div>
@@ -213,8 +275,9 @@
         </div>
       </section>
     </main>
+
     <!-- ========== Footer ========== -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-info">
@@ -229,8 +292,9 @@
             <ul class="footer-nav">
               <li><a href="#home" class="footer-link">Home</a></li>
               <li><a href="#about" class="footer-link">About</a></li>
+              <li><a href="#skills" class="footer-link">Skills</a></li>
+              <li><a href="#education" class="footer-link">Education</a></li>
               <li><a href="#projects" class="footer-link">Projects</a></li>
-              <li><a href="#contact" class="footer-link">Contact</a></li>
             </ul>
           </div>
           <div class="footer-social">
@@ -240,23 +304,46 @@
                 href="https://github.com/kabakadev"
                 class="social-link"
                 target="_blank"
-                >GitHub</a
               >
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+                GitHub
+              </a>
               <a
                 href="https://www.linkedin.com/in/ian-kabaka/"
                 class="social-link"
                 target="_blank"
-                >LinkedIn</a
               >
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
               <a
                 href="https://x.com/kabaka_ian"
                 class="social-link"
                 target="_blank"
-                >X</a
               >
-              <a href="mailto:iankabaka1@gmail.com" class="social-link"
-                >Email</a
-              >
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+                X
+              </a>
+              <a href="mailto:iankabaka1@gmail.com" class="social-link">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"
+                  />
+                </svg>
+                Email
+              </a>
             </div>
           </div>
         </div>

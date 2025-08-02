@@ -99,7 +99,7 @@ A full-featured learning platform built with:
 - **GitHub**: [kabakadev](https://github.com/kabakadev)
 - **LinkedIn**: [ian-kabaka](https://www.linkedin.com/in/ian-kabaka)
 - **Twitter**: [@kabaka_ian](https://twitter.com/kabaka_ian)
-- **Email**: iankabaka1@email.com
+- **Email**: iankabaka1@gmail.com
 
 ---
 
