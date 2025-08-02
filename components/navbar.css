@@ -167,8 +167,9 @@
 
   /* Adjust header for mobile - move logo down and make smaller */
   .header {
-    top: 20px; /* Push header down */
-    background-color: transparent; /* Remove background */
+    position: static; /* <- Let it scroll with the page */
+    top: auto;
+    background-color: transparent;
     backdrop-filter: none;
     border-bottom: none;
     box-shadow: none;
