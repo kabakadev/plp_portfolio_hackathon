@@ -21,15 +21,81 @@
   padding-top: 5rem;
 }
 .hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
   align-items: center;
+  background: linear-gradient(
+    135deg,
+    var(--bg-secondary) 0%,
+    var(--bg-primary) 100%
+  );
+  padding: 5rem 1rem;
 }
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+/* Background shapes */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.shape-1 {
+  width: 600px;
+  height: 600px;
+  top: -300px;
+  right: -300px;
+  background: radial-gradient(
+    circle,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  animation: float 15s infinite ease-in-out;
+}
+
+.shape-2 {
+  width: 300px;
+  height: 300px;
+  bottom: -150px;
+  left: -150px;
+  background: radial-gradient(
+    circle,
+    var(--accent-color),
+    var(--primary-color)
+  );
+  animation: float 20s infinite ease-in-out reverse;
+}
+
+.shape-3 {
+  width: 200px;
+  height: 200px;
+  top: 40%;
+  left: 10%;
+  background: var(--secondary-color);
+  animation: pulse 8s infinite ease-in-out;
+}
+
+.shape-4 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  right: 15%;
+  background: var(--accent-color);
+  animation: rotate 25s infinite linear;
+}
+
 .hero-content {
+  position: relative;
+  z-index: 2;
   animation: fadeInUp 1s ease-out;
 }
 .hero-title {
@@ -96,6 +162,42 @@
   .profile-img:hover {
     transform: none !important;
     box-shadow: var(--shadow-lg); /* fallback shadow */
+  }
+}
+/* New animations */
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, 20px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.15;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 

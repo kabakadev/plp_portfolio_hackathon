@@ -19,6 +19,12 @@
   --transition: all 0.3s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .hero-background .shape,
+  .about-background .shape {
+    animation: none !important;
+  }
+}
 /* Base Typography */
 body {
   font-size: 1rem;

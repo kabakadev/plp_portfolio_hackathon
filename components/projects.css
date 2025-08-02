@@ -13,14 +13,13 @@
 .project-card {
   background-color: var(--bg-primary);
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg); /* Enhanced shadow */
   overflow: hidden;
   transition: var(--transition);
   border: 1px solid var(--border-color);
-  width: 100%; /* Make card responsive within grid */
-  max-width: 700px; /* Prevent card from getting too wide */
+  position: relative;
+  z-index: 2;
 }
-
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-lg);
