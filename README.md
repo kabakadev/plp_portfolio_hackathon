@@ -90,7 +90,7 @@ A full-featured learning platform built with:
 - REST API architecture
 
 🔗 [Live Demo](https://flashlearn254.netlify.app/)  
-💻 [Source Code](https://github.com/kabakadev/flashlearn)
+💻 [Source Code](https://github.com/kabakadev/flashlearn-frontend.git)
 
 ---
 
