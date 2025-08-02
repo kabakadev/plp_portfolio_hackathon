@@ -185,3 +185,32 @@ section {
   stroke: currentColor;
   fill: currentColor;
 }
+/* scroll lock support*/
+html:has(#mobile-menu-toggle:checked),
+body:has(#mobile-menu-toggle:checked) {
+  overflow: hidden;
+  height: 100%;
+}
+/* Add this to main.css */
+.nav-menu-container {
+  position: relative;
+}
+
+/* Fix for smooth scrolling when menu is open */
+html:not(:has(#mobile-menu-toggle:checked)) {
+  scroll-behavior: smooth;
+}
+
+/* Ensure links work properly */
+.nav-link {
+  scroll-behavior: smooth;
+  display: block;
+  width: 100%;
+}
+
+/* Fix for Safari scrolling */
+@supports (-webkit-touch-callout: none) {
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
