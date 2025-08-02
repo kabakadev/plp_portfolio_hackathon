@@ -125,9 +125,9 @@
   transition: var(--transition);
 }
 
-.profile-img-container:hover {
+/* .profile-img-container:hover {
   transform: scale(1.05);
-}
+} */
 
 .profile-img {
   width: 100%;
