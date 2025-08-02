@@ -4,7 +4,7 @@
 
 This is my professional portfolio website showcasing my skills, projects, and experience as a **Full-Stack Web Developer**. The site features a modern, responsive design with clean aesthetics and intuitive navigation.
 
-![Portfolio Screenshot](https://via.placeholder.com/800x400.png?text=Portfolio+Screenshot)
+![Portfolio Screenshot](assets/images/portfolio_screenshot.png)
 
 ---
 
@@ -71,7 +71,7 @@ To run this project locally:
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/kabakadev/portfolio.git
+git clone https://github.com/kabakadev/plp_portfolio_hackathon.git
 ```
 
 2. **Open `index.html` in your browser**
@@ -100,13 +100,6 @@ A full-featured learning platform built with:
 - **LinkedIn**: [ian-kabaka](https://www.linkedin.com/in/ian-kabaka)
 - **Twitter**: [@kabaka_ian](https://twitter.com/kabaka_ian)
 - **Email**: iankabaka1@gmail.com
-
----
-
-## 📄 License
-
-© 2025 Ian Kabaka. All rights reserved.  
-This project may not be reproduced or redistributed without permission.
 
 ---
 
