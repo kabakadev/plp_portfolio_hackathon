@@ -204,7 +204,7 @@
 
   /* Add bottom padding to body to account for mobile nav */
   body {
-    padding-bottom: 85px;
+    padding-bottom: 60px;
   }
 
   /* Adjust sections to account for mobile nav and moved header */
