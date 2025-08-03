@@ -5,6 +5,7 @@
   overflow: hidden;
 }
 
+/* Gradient background with decorative patterns */
 .about::before {
   content: "";
   position: absolute;
@@ -67,6 +68,7 @@
   margin-bottom: 3rem;
 }
 
+/* Styled text block with hover effect */
 .about-text {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -88,7 +90,7 @@
   border-color: rgba(108, 99, 255, 0.4);
 }
 
-/* Add decorative elements to text blocks */
+/* Color accent bar on text blocks */
 .about-text::before {
   content: "";
   position: absolute;
@@ -104,14 +106,14 @@
   border-radius: 2px;
 }
 
-/* Highlight key phrases */
+/* Highlight important text elements */
 .about-text strong,
 .about-text em {
   color: var(--primary-color);
   font-weight: 600;
 }
 
-/* Style the last paragraph differently for emphasis */
+/* Full-width emphasized text block */
 .about-text:last-of-type {
   grid-column: 1 / -1;
   text-align: center;
@@ -124,6 +126,7 @@
   font-style: italic;
 }
 
+/* Responsive card grid layout */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -131,6 +134,7 @@
   margin-top: 4rem;
 }
 
+/* Feature card with hover animation */
 .about-card {
   background: rgba(30, 30, 30, 0.8);
   backdrop-filter: blur(15px);
@@ -143,7 +147,7 @@
   overflow: hidden;
 }
 
-/* Add subtle gradient overlay to cards */
+/* Animated gradient overlay on cards */
 .about-card::before {
   content: "";
   position: absolute;
@@ -176,6 +180,7 @@
   z-index: 2;
 }
 
+/* Animated icon in cards */
 .about-card .icon {
   width: 3rem;
   height: 3rem;
@@ -202,7 +207,7 @@
   line-height: 1.6;
 }
 
-/* Responsive adjustments */
+/* Mobile layout adjustments */
 @media (max-width: 768px) {
   .about-intro {
     grid-template-columns: 1fr;
@@ -221,7 +226,7 @@
   }
 }
 
-/* Add floating animation */
+/* Floating animation keyframes */
 @keyframes float {
   0% {
     transform: translate(0, 0) scale(1);
