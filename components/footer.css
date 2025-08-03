@@ -1,25 +1,27 @@
 /* ========== Footer ========== */
 .footer {
-  background-color: var(--bg-dark);
-  color: white;
-  padding: 4rem 0 1rem;
-  position: relative;
+  background-color: var(--bg-dark); /* Dark background matching theme */
+  color: white; /* Base text color */
+  padding: 4rem 0 1rem; /* Vertical padding (top/main/bottom) */
+  position: relative; /* For pseudo-element positioning */
 }
 
+/* Gradient top border using pseudo-element */
 .footer::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 1px; /* Thin line separator */
   background: linear-gradient(
-    90deg,
+    /* Primary-to-secondary color gradient */ 90deg,
     var(--primary-color),
     var(--secondary-color)
   );
 }
 
+/* Main content grid container */
 .footer-content {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -29,6 +31,7 @@
   z-index: 2;
 }
 
+/* Info section */
 .footer-info {
   max-width: 300px;
 }
