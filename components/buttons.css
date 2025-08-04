@@ -1,4 +1,5 @@
 /* ========== Buttons ========== */
+/* Base button component */
 .btn {
   display: inline-block;
   padding: 0.85rem 1.75rem;
@@ -12,6 +13,7 @@
   font-family: "Space Grotesk", sans-serif;
 }
 
+/* Primary gradient button with hover animation */
 .btn-primary {
   background: linear-gradient(
     45deg,
@@ -32,6 +34,7 @@
   );
 }
 
+/* Secondary bordered button with fill effect */
 .btn-secondary {
   background-color: transparent;
   color: var(--text-primary);
@@ -45,6 +48,7 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Outline variant with solid fill on hover */
 .btn-outline {
   background-color: transparent;
   color: var(--secondary-color);
