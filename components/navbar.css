@@ -1,3 +1,5 @@
+/* ========== Navigation ========== */
+/* Fixed header with blurred background */
 .header {
   position: fixed;
   top: 0;
@@ -14,6 +16,7 @@
   padding: 1rem 0;
 }
 
+/* Main navigation container */
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -24,6 +27,7 @@
   position: relative;
 }
 
+/* Gradient text logo */
 .nav-logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -38,13 +42,14 @@
   z-index: 1002;
 }
 
-/* Desktop Navigation - Text Only */
+/* Desktop navigation links */
 .desktop-nav {
   display: flex;
   gap: 2.5rem;
   align-items: center;
 }
 
+/* Link with animated underline */
 .nav-link {
   color: var(--text-primary);
   font-weight: 500;
@@ -72,7 +77,7 @@
   width: 100%;
 }
 
-/* Mobile Bottom Navigation - Icons Only */
+/* Mobile bottom navigation bar */
 .mobile-nav {
   display: none;
   position: fixed;
@@ -89,6 +94,7 @@
   align-items: center;
 }
 
+/* Mobile navigation items */
 .mobile-nav-item {
   display: flex;
   flex-direction: column;
@@ -104,6 +110,7 @@
   overflow: hidden;
 }
 
+/* Gradient hover effect for mobile items */
 .mobile-nav-item::before {
   content: "";
   position: absolute;
@@ -131,11 +138,6 @@
   transform: translateY(-2px);
 }
 
-.mobile-nav-item:active {
-  transform: translateY(0);
-  color: var(--primary-color);
-}
-
 .mobile-nav-icon {
   width: 24px;
   height: 24px;
@@ -143,19 +145,18 @@
   transition: all 0.3s ease;
 }
 
-.mobile-nav-item:hover .mobile-nav-icon {
-  stroke-width: 2.5;
-  transform: scale(1.1);
+/* Active state for navigation items */
+.mobile-nav-item.active {
+  color: var(--primary-color);
 }
 
-/* Hide labels on mobile - icons only */
-.mobile-nav-label {
-  display: none;
+.mobile-nav-item.active::before {
+  opacity: 1;
 }
 
-/* Media Queries */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  /* Hide desktop navigation */
+  /* Hide desktop nav on mobile */
   .desktop-nav {
     display: none;
   }
@@ -165,14 +166,12 @@
     display: flex;
   }
 
-  /* Adjust header for mobile -  Make logo scrollable on mobile */
+  /* Adjust header for mobile */
   .header {
-    position: static; /* <- Let it scroll with the page */
-    top: auto;
+    position: static;
     background-color: transparent;
     backdrop-filter: none;
     border-bottom: none;
-    box-shadow: none;
   }
 
   .navbar {
@@ -180,21 +179,12 @@
   }
 
   .nav-container {
-    justify-content: center; /* Center the logo */
+    justify-content: center;
   }
 
+  /* Enhanced mobile logo styling */
   .nav-logo {
-    font-size: 1.1rem; /* Make logo smaller */
-    position: relative;
-    z-index: 1002;
-    background: linear-gradient(
-      90deg,
-      var(--primary-color),
-      var(--secondary-color)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 1.1rem;
     padding: 0.3rem 0.8rem;
     border-radius: 8px;
     backdrop-filter: blur(10px);
@@ -202,84 +192,19 @@
     border: 1px solid rgba(51, 51, 51, 0.3);
   }
 
-  /* Add bottom padding to body to account for mobile nav */
+  /* Body padding for mobile nav */
   body {
     padding-bottom: 60px;
   }
 
-  /* Adjust sections to account for mobile nav and moved header */
-  section:last-child {
-    padding-bottom: calc(6rem + 85px);
-  }
-
-  /* Adjust home section for moved header */
+  /* Home section adjustments */
   #home {
-    padding-top: 4rem; /* Reduce top padding since header is moved down */
+    padding-top: 4rem;
     min-height: calc(100vh - 85px);
   }
 }
 
-@media (max-width: 480px) {
-  .mobile-nav {
-    padding: 0.6rem 0 calc(0.6rem + env(safe-area-inset-bottom));
-  }
-
-  .mobile-nav-item {
-    min-width: 50px;
-    padding: 0.5rem 0.3rem;
-  }
-
-  .mobile-nav-icon {
-    width: 22px;
-    height: 22px;
-  }
-
-  .nav-logo {
-    font-size: 1rem;
-    padding: 0.25rem 0.6rem;
-  }
-
-  .header {
-    top: 15px; /* Move even further down on small screens */
-  }
-}
-
-@media (max-width: 360px) {
-  .mobile-nav-item {
-    min-width: 45px;
-    padding: 0.4rem 0.2rem;
-  }
-
-  .mobile-nav-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .nav-logo {
-    font-size: 0.9rem;
-    padding: 0.2rem 0.5rem;
-  }
-
-  .header {
-    top: 10px;
-  }
-}
-
-/* Active state for current section */
-.mobile-nav-item.active {
-  color: var(--primary-color);
-}
-
-.mobile-nav-item.active::before {
-  opacity: 1;
-}
-
-.mobile-nav-item.active .mobile-nav-icon {
-  stroke-width: 2.5;
-  transform: scale(1.05);
-}
-
-/* Ensure desktop shows full text navigation */
+/* Desktop-specific styles */
 @media (min-width: 769px) {
   .mobile-nav {
     display: none !important;
@@ -289,7 +214,7 @@
     display: flex !important;
   }
 
-  /* Reset header position for desktop */
+  /* Reset header for desktop */
   .header {
     top: 0;
     background-color: rgba(10, 10, 10, 0.95);
