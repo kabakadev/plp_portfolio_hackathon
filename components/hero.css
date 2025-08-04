@@ -1,3 +1,5 @@
+/* ========== Hero Section ========== */
+/* Full-screen section with centered content */
 #home {
   min-height: 100vh;
   display: flex;
@@ -7,6 +9,7 @@
   padding-top: 5rem;
 }
 
+/* Background pattern container */
 .hero-background {
   position: absolute;
   top: 0;
@@ -17,6 +20,7 @@
   overflow: hidden;
 }
 
+/* Decorative radial gradient pattern */
 .hero-pattern {
   position: absolute;
   width: 200%;
@@ -50,6 +54,7 @@
   opacity: 0.7;
 }
 
+/* Two-column content layout */
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -62,10 +67,12 @@
   z-index: 2;
 }
 
+/* Text content with fade-in animation */
 .hero-content {
   animation: fadeInUp 1s ease-out;
 }
 
+/* Main heading with gradient name */
 .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
@@ -86,6 +93,7 @@
   background-clip: text;
 }
 
+/* Supporting description text */
 .hero-subtitle {
   font-size: 1.25rem;
   color: var(--text-secondary);
@@ -94,12 +102,14 @@
   max-width: 90%;
 }
 
+/* Call-to-action button group */
 .hero-cta {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
 }
 
+/* Profile image container with slide-in animation */
 .hero-image {
   position: relative;
   display: flex;
@@ -107,6 +117,7 @@
   animation: fadeInRight 1s ease-out 0.3s both;
 }
 
+/* Circular profile image with gradient border */
 .profile-img-container {
   position: relative;
   width: 320px;
@@ -125,16 +136,13 @@
   transition: var(--transition);
 }
 
-/* .profile-img-container:hover {
-  transform: scale(1.05);
-} */
-
 .profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* Animated floating gradient shapes */
 .hero-shape {
   position: absolute;
   width: 150px;
