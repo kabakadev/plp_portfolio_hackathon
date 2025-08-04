@@ -4,7 +4,12 @@
 
 This is my professional portfolio website showcasing my skills, projects, and experience as a **Full-Stack Web Developer**. The site features a modern, responsive design with clean aesthetics and intuitive navigation.
 
-![Portfolio Screenshot](assets/images/portfolio_screenshot.png)
+<h3 align="center">Responsive Previews</h3>
+
+<p align="center">
+  <img src="assets/images/portfolio_screenshot.png" alt="Desktop View" width="48%" style="margin-right: 10px;" />
+  <img src="assets/images/portfolio_mobile_screenshot.jpg" alt="Mobile View" width="15%" />
+</p>
 
 ---
 
