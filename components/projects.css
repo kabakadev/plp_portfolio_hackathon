@@ -1,9 +1,11 @@
 /* ========== Projects Section ========== */
+/* Main container with background pattern */
 .projects {
   position: relative;
   overflow: hidden;
 }
 
+/* Decorative radial gradient background */
 .projects::before {
   content: "";
   position: absolute;
@@ -24,6 +26,7 @@
   z-index: 1;
 }
 
+/* Centered project grid layout */
 .projects-grid {
   display: flex;
   justify-content: center;
@@ -33,6 +36,7 @@
   z-index: 2;
 }
 
+/* Project card with hover animation */
 .project-card {
   background: rgba(30, 30, 30, 0.7);
   backdrop-filter: blur(5px);
@@ -51,6 +55,7 @@
   border-color: var(--accent-color);
 }
 
+/* Project image with overlay effect */
 .project-image {
   height: 240px;
   overflow: hidden;
@@ -84,6 +89,7 @@
   transform: scale(1.05);
 }
 
+/* Project content area */
 .project-content {
   padding: 1.75rem;
 }
@@ -102,6 +108,7 @@
   font-size: 1rem;
 }
 
+/* Technology tags container */
 .project-tech {
   display: flex;
   flex-wrap: wrap;
@@ -109,6 +116,7 @@
   margin-bottom: 1.8rem;
 }
 
+/* Individual technology tag */
 .tech-tag {
   background: rgba(79, 195, 247, 0.1);
   color: var(--secondary-color);
@@ -119,11 +127,13 @@
   border: 1px solid rgba(79, 195, 247, 0.3);
 }
 
+/* Project action links */
 .project-links {
   display: flex;
   gap: 1.25rem;
 }
 
+/* Link with animated underline */
 .project-link {
   color: var(--secondary-color);
   font-weight: 500;
