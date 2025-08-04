@@ -42,7 +42,6 @@ You can view the live portfolio here:
 
 - **HTML5**: Semantic markup for accessibility
 - **CSS3**: Modern styling with Flexbox and Grid
-- **JavaScript**: Interactive elements
 - **Google Fonts**: Poppins font family
 
 ### Development Tools
