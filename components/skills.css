@@ -14,6 +14,7 @@
   z-index: 2;
 }
 
+/* Skill category card with top accent border */
 .skill-category {
   background: rgba(30, 30, 30, 0.7);
   backdrop-filter: blur(5px);
@@ -26,6 +27,7 @@
   overflow: hidden;
 }
 
+/* Gradient top border */
 .skill-category::before {
   content: "";
   position: absolute;
@@ -46,6 +48,7 @@
   border-color: var(--primary-color);
 }
 
+/* Category title styling */
 .skill-category-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -54,6 +57,7 @@
   text-align: center;
 }
 
+/* Skills tag container */
 .skill-items {
   display: flex;
   flex-wrap: wrap;
@@ -61,6 +65,7 @@
   justify-content: center;
 }
 
+/* Individual skill tag with hover effect */
 .skill-item {
   background: rgba(108, 99, 255, 0.1);
   padding: 0.5rem 1rem;
